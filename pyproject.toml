@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "tetris"
+version = "0.1.0"
+description = ""
+authors = ["Kostiantyn Shmyhelskyi <graflearnt@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.13.2"
+black = "^24.10.0"
+ruff = "^0.6.9"
+pre-commit = "^4.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.black]
+line_length = 88
+target_version = ['py312']
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "C"]
+ignore = ["E501"]
+fix = true
+target-version = "py312"
